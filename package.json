@@ -1,0 +1,24 @@
+{
+  "name": "goodnightbot_twitch",
+  "version": "0.0.1",
+  "description": "Twitch bot that listens to user input and tells them goodnight if appropriate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhillipDiCarlo/GoodnightBot_Twitch.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhillipDiCarlo/GoodnightBot_Twitch/issues"
+  },
+  "homepage": "https://github.com/PhillipDiCarlo/GoodnightBot_Twitch#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "tmi.js": "^1.8.5"
+  }
+}
