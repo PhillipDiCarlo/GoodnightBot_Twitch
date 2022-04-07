@@ -1,6 +1,6 @@
 {
   "name": "goodnightbot_twitch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Twitch bot that listens to user input and tells them goodnight if appropriate",
   "main": "index.js",
   "scripts": {
