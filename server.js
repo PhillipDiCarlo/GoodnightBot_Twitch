@@ -1,19 +1,8 @@
-console.log("hello, twitchers");
-
-// const tmi = require('tmi.js');
-
-// const client = new tmi.Client({
-// 	channels: [ 'italiandogs' ]
-// });
-
-// client.connect();
-
-// client.on('message', (channel, tags, message, self) => {
-// 	// "Alca: Hello, World!"
-// 	console.log(`${tags['display-name']}: ${message}`);
-// });
+console.log("Twitch Bot Starting");
 
 require("dotenv").config();
+// csv = require('jquery-csv');
+
 
 const tmi = require('tmi.js');
 
@@ -23,8 +12,9 @@ const client = new tmi.Client({
 		username: process.env.TWITCH_BOT_USERNAME,
 		password: process.env.TWITCH_OAUTH_TOKEN
 	},
-	channels: [ 'italiandogs' ]
+	channels: [ 'Italiandogs', 'mizkif' ]
 });
+
 
 client.connect();
 
@@ -32,8 +22,14 @@ client.on('message', (channel, tags, message, self) => {
 	// Ignore echoed messages.
 	if(self) return;
 
-	if(message.toLowerCase() === 'gn chat') {
-		// "@alca, heya!"
+    //tell chat gn
+	if(process.env.GN_MESSAGES.includes(message.toLowerCase())) {
 		client.say(channel, `gn ${tags.username} pepeL`);
-	}
+	 }
+
+    //i miss ockie
+    if(message.toLowerCase() === "ockie") {
+		client.say(channel, `I miss Ockie peepoSad`);
+	 }
+
 });
